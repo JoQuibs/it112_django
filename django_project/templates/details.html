@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ myname.firstname }} {{ myname.lastname }}
+{% endblock %}
+
+
+{% block content %}
+  <h1>{{ myname.firstname }} {{ myname.lastname }}</h1>
+  
+  <p>Phone {{ myname.phone }}</p>
+  
+  <p>Back to <a href="/django_project">Names </a></p>
+  
+{% endblock %}
+
+</body>
+</html>

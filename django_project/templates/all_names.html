@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+{% extends "master.html" %}
+
+{% block title %}
+  List of all names 
+{% endblock %}
+
+
+{% block content %}
+  <h1> Names </h1>
+  
+  <ul>
+    {% for x in mynames %}
+      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+</body>
+</html>
